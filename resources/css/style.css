@@ -1,0 +1,719 @@
+/*------------------------------*/
+/*----------BASIC SETUP---------*/
+/*------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #333;
+    color: #a0a0a0;
+    font-family: 'Lato', 'Arial', sans-serif, 'Black Ops One';
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/*------------------------------*/
+/*------REUSABLE COMPONENTS-----*/
+/*------------------------------*/
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 1%;
+}
+
+span {
+    font-size: 30%;
+    font-weight: 300;
+}
+
+.rule-list {
+    text-align: left;
+}
+
+
+/*------------------------------*/
+/*-----------HEADING------------*/
+/*------------------------------*/
+h1,
+h2,
+h3 {
+    font-family: 'Black Ops One', cursive;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+.title {
+    margin-top: 0;
+    color: #eb0000;
+    font-size: 400%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    text-shadow: 4px 4px 4px #000;
+}
+
+.subtitle {
+    margin-top: -25px;
+    margin-bottom: 10px;
+    color: #b4b4b4;
+    font-size: 220%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    text-shadow: 4px 4px 4px #000;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #e62222;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+
+/*------------------------------*/
+/*----------PARAGRAPHS----------*/
+/*------------------------------*/
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*------------------------------*/
+/*------------ICONS-------------*/
+/*------------------------------*/
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    color: #e62222;
+    font-size: 120%;
+    margin-right: 10px;
+    /*secret to align text and icons*/
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+/*------------------------------*/
+/*------------BUTTONS-----------*/
+/*------------------------------*/
+.myButton {
+    box-shadow: inset 0px 1px 0px 0px #cf866c;
+    background: linear-gradient(to bottom, #751900 5%, #ff2b00 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#751900', endColorstr='#ff2b00', GradientType=0);
+    background-color: #751900;
+    border-radius: 13px;
+    border: 1px solid #942911;
+    display: inline-block;
+    cursor: pointer;
+    color: #000000;
+    font-family: 'Black Ops One';
+    font-size: 15px;
+    padding: 4px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #854629;
+}
+
+.myButton:hover {
+    background: linear-gradient(to bottom, #ff2b00 5%, #751900 100%);
+}
+
+.myButton:active {
+    position: relative;
+}
+
+.btn-green {
+    box-shadow: inset 0px 1px 0px 0px #cf866c;
+    background: linear-gradient(to bottom, #2bff00 5%, #015c14 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#2bff00', endColorstr='#015c14', GradientType=0);
+    border-radius: 13px;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Black Ops One';
+    font-size: 15px;
+    padding: 4px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #000000;
+}
+
+.btn-green:hover {
+    background: linear-gradient(to bottom, #015c14 5%, #2bff00 100%);
+}
+
+.btn-green:active {
+    position: relative;
+}
+
+/*------------------------------*/
+/*------------HEADER------------*/
+/*------------------------------*/
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero-min.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    height: 125px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+/*------------------------------*/
+/*-----------MAIN NAV-----------*/
+/*------------------------------*/
+.main-nav {
+    font-family: 'Black Ops One', cursive;
+    float: right;
+    list-style: none;
+    margin-top: 45px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 100%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #9b0000;
+}
+
+.icon-nav {
+    color: #9b0000;
+}
+
+/*------------------------------*/
+/*----------MOBILE NAV----------*/
+/*------------------------------*/
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+
+}
+
+
+/*------------------------------*/
+/*----------STICKY NAV----------*/
+/*------------------------------*/
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(85, 85, 85);
+    box-shadow: 0 2px 2px #9b0000;
+    z-index: 9999;
+}
+
+
+.sticky .main-nav {
+    margin-top: 20px;
+    padding-top: -10px;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #a0a0a0;
+}
+
+.sticky .logo {
+    display: none;
+}
+
+/*------------------------------*/
+/*------------MISSION-----------*/
+/*------------------------------*/
+.section-mission .long-copy {
+    margin-bottom: 30px;
+}
+
+/*------------------------------*/
+/*------------SERVERS-----------*/
+/*------------------------------*/
+.section-servers {
+    background-color: #555;
+}
+
+.server-box {
+    background-color: #333;
+    border-radius: 5px;
+    width: 90%;
+    height: 390px;
+    margin-left: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+    box-shadow: 5px 5px 5px #000;
+}
+
+.server-box div {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 15px;
+    border-bottom: 2px solid #000;
+}
+
+.server-box div:last-child {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    border: none;
+}
+
+.server-name {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: 'Black Ops One', cursive;
+    font-size: 200%;
+    font-weight: 100;
+    color: #000;
+}
+
+.server-host {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 80%;
+    display: inline-block;
+}
+
+.host-container img {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 30px;
+    width: auto;
+    background: none;
+    margin-top: 4px;
+    border: none;
+}
+
+.server-box ul {
+    list-style: none;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+/*------------------------------*/
+/*---------TESTIMONIALS---------*/
+/*------------------------------*/
+.section-testimonials {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/testimonials-bg.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+blockquote:before {
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block
+}
+
+/*------------------------------*/
+/*------------GAMES-------------*/
+/*------------------------------*/
+.section-games {
+    background-color: #333;
+    position: relative;
+    padding-bottom: 25px;
+}
+
+.game-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+.game-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.game-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.game-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.game-photo img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/*------------------------------*/
+/*------------DISCORD-----------*/
+/*------------------------------*/
+.section-discord {
+    background-color: #555;
+}
+
+.discord-container {
+    text-align: center;
+}
+
+/*------------------------------*/
+/*-----------DONATIONS----------*/
+/*------------------------------*/
+.section-donations {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/donation-bg-min.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+.paypal-container {
+    text-align: center;
+}
+
+/*------------------------------*/
+/*----------CONTACT FORM--------*/
+/*------------------------------*/
+.contact-form {
+    width: 70%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+text-area {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+.form-messages {
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.success {
+    background-color: rgba(38, 191, 68, 0.8);
+    color: #333;
+}
+
+.error {
+    background-color: #ba0000;
+    color: #333;
+}
+
+/*------------------------------*/
+/*-------------FOOTER-----------*/
+/*------------------------------*/
+footer {
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 150%;
+}
+
+.ion-logo-facebook,
+.ion-logo-twitter,
+.ion-logo-googleplus,
+.ion-logo-instagram {
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.ion-logo-facebook:hover {
+    color: #3b5998
+}
+
+.ion-logo-twitter:hover {
+    color: #00aced
+}
+
+.ion-logo-googleplus:hover {
+    color: #dd4b39
+}
+
+.ion-logo-instagram:hover {
+    color: #517fa4
+}
+
+footer p {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*------------------------------*/
+/*-----------ANIMATIONS---------*/
+/*------------------------------*/
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+    opacity: 0;
+    animation-duration: 1s;
+}
+
+.js--wp-4 {
+    animation-duration: 1s;
+}
+
+.js--wp-1 .animated,
+.js--wp-2 .animated,
+.js--wp-3 .animated {
+    opacity: 1;
+}
+
+/*------------------------------*/
+/*--------------MODAL-----------*/
+/*------------------------------*/
+
+.modal-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fallback color */
+
+}
+
+
+/* Modal Header */
+
+.modal-header {
+    padding: 60px 5px 5px 5px;
+    color: #ba0000;
+    background-color: #333;
+    border: 1px solid #ba0000;
+    border-radius: 25px 25px 0 0;
+}
+
+
+/* Modal Body */
+
+.modal-body {
+    background-color: #555;
+    padding: 25px 26px;
+    list-style-type: none;
+    border: 1px solid #ba0000;
+}
+
+
+/* Modal Footer */
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #333;
+    color: #ba0000;
+    border: 1px solid #ba0000;
+    border-radius: 0 0 25px 25px;
+}
+
+.modal-content {
+    margin: 15% auto;
+    border-radius: 25px;
+    width: 80%;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.close-modal {
+    position: fixed;
+    right: 120px;
+    top: 100px;
+    background-color: #000;
+    color: #aaa;
+    float: right;
+    padding: 10px 13px;
+    font-size: 28px;
+}
